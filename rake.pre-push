@@ -1,0 +1,10 @@
+#!/bin/sh
+
+CMD='rake'
+
+$CMD
+if [ $? -ne 0 ]; then
+  echo >&2 "Failed $CMD, not pushing"
+  exit 1
+fi
+exit 0
